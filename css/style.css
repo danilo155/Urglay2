@@ -24,10 +24,32 @@ header a {
 .logo {
   display: none;
 }
+.btn-input {
+  color: #fff;
+  background: transparent;
+  border: none;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+.Sign_up {
+  border: 2px solid #fff;
+  border-radius: 25px;
+}
 /* .promo */
 .promo {
   height: 100vh;
   background: url("/img/photo_2021-06-04_19-09-22.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.promo-inner {
+  z-index: 2;
+  position: relative;
+  color: #fff;
+  text-align: center;
 }
 .promo::before {
   content: "";
@@ -39,6 +61,6 @@ header a {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
