@@ -4,11 +4,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: "Roboto", serif;
+  font-size: 14px;
+  color: #666;
+}
 h1,
 h2,
 h3,
 .btn-input,
-.btn-section {
+.btn-section,
+.logo {
   font-family: "Montserrat", serif;
   font-weight: 700;
 }
@@ -25,12 +31,42 @@ header {
   align-items: center;
   z-index: 3;
 }
+.btn-input:hover {
+  background: #ff4e50;
+  transition: 0.5s;
+}
+.log_in:hover {
+  color: #ff4e50;
+  transition: 0.5s;
+  background: transparent;
+}
+.btn-input {
+  transition: 0.5s;
+}
 header a {
   text-transform: uppercase;
   text-decoration: none;
 }
 header .logo {
   display: none;
+}
+@media (min-width: 768px) {
+  header .logo {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  header {
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .logo {
+    display: none;
+  }
+  .btn-section {
+    margin: 0 auto;
+  }
 }
 .btn-input {
   color: #fff;
@@ -75,6 +111,14 @@ header .logo {
   color: #fff;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .promo-inner .logo {
+    display: none;
+  }
+  .promo-inner h1 {
+    font-size: 52px;
+  }
+}
 .logo {
   font-size: 20px;
 }
@@ -93,6 +137,8 @@ h1 {
   padding-bottom: 13px;
   border-radius: 20px;
   margin-top: 20px;
+  text-align: center;
+  justify-content: center;
 }
 /* Partners */
 .partner {
@@ -104,6 +150,22 @@ h1 {
 .partnerslist {
   list-style: none;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .partnerslist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .partnerslist li {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .partnerslist li {
+    width: 25%;
+  }
 }
 .partnerslist li {
   padding-top: 15px;
@@ -119,6 +181,7 @@ h1 {
 }
 .paprtner-photo {
   position: relative;
+  display: inline-block;
 }
 .paprtner-photo::before {
   content: "";
@@ -129,7 +192,7 @@ h1 {
   border-radius: 50%;
   position: absolute;
   bottom: -10px;
-  right: 40px;
+  right: -10px;
 }
 .red::before {
   background: url("../img/television.svg") center / 16px no-repeat;
@@ -147,4 +210,17 @@ h1 {
 .blue::before {
   background: url("../img/flask.svg") center / 16px no-repeat;
   background-color: #4e73db;
+}
+.partner .See_other_partners {
+  text-align: center;
+}
+.partner .btn-section {
+  border: 2px solid #ff4e50;
+  background: transparent;
+  color: #ff4e50;
+}
+.partnerslist h3 {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
